@@ -64,12 +64,6 @@
   text-transform: uppercase;
 }
 
-.theme-menu {
-}
-
-.header__theme-menu {
-}
-
 .theme-menu__list {
   display: flex;
   align-items: center;
@@ -79,6 +73,7 @@
   font-size: 14px;
   font-weight: var(--font-weight-);
   line-height: 14px;
+  padding-left: 5px;
 }
 
 .theme-menu__item {
@@ -102,13 +97,25 @@
   position: absolute;
   opacity: 0.9;
   inline-size: 5px;
-  right: 86px;
+  right: 90px;
+  animation-name: arrow;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes arrow {
+  0% {
+    transform: rotate(0) translateX(0.5px);
+  }
+  100% {
+    transform: rotate(0) translateX(4px);
+  }
 }
 
 .article__text {
   width: 351px;
   height: 42px;
-
   font-size: 18px;
   font-weight: var(--font--weight);
   line-height: 21.78px;
