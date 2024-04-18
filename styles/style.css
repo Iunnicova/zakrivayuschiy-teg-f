@@ -1,20 +1,120 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-
-*/
-
 .page {
-  min-inline-size: 320px;
+  min-inline-size: 375px;
   min-block-size: 100dvb;
+  /* background: var(--themes-background, #ffffff); */
+  background: var(--themes-background, #7b8bce);
+  /* color: var(--themes-main-color, #000000); */
+  color: var(--themes-main-color, #0c6903);
+  box-sizing: border-box;
+  appearance: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  /* min-height: 667px; */
+  padding: 102px 2px;
+  background: repeating-linear-gradient(
+      transparent,
+      transparent 2px,
+      var(--header-cell) 2px,
+      var(--header-cell) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      var(--header-cell) 2px,
+      var(--header-cell) 4px
+    ),
+    linear-gradient(
+      180deg,
+      var(--header-background) 0.01%,
+      var(--header-background-dark) 100%
+    );
+}
+
+.header__area {
+  display: flex;
+  flex-direction: column;
+  max-width: 371px;
+  min-height: 323px;
+  background: var(--themes-background, #ffffff);
+  outline: 2px solid var(--themes-main-color, #000000);
+  padding-top: 120px;
+  width: clamp(23.188rem, 16.035rem + 30.516vw, 43.5rem);
+}
+
+.header__logo {
+  text-align: center;
+  font-size: 49px;
+  font-weight: var(--font-weight-);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header__title {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 20px;
+  text-transform: uppercase;
+}
+
+.theme-menu {
+}
+
+.header__theme-menu {
+}
+
+.theme-menu__list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 23px;
+  font-size: 14px;
+  font-weight: var(--font-weight-);
+  line-height: 14px;
+}
+
+.theme-menu__item {
+  position: relative;
+  width: 82px;
+  max-height: 14px;
+  font-size: 15px;
+  text-align: justify;
+}
+
+.theme-menu__button {
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  display: block;
+  position: absolute;
+  opacity: 0.9;
+  inline-size: 5px;
+  right: 86px;
+}
+
+.article__text {
+  width: 351px;
+  height: 42px;
+
+  font-size: 18px;
+  font-weight: var(--font--weight);
+  line-height: 21.78px;
+  text-align: left;
+  color: var(--Themes-mainColor, #000000);
+}
+
+#disk {
 }

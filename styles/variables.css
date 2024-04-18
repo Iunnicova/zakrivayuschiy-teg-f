@@ -1,1 +1,12 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root{
+	--themes-background: #FFFFFF;
+	--themes-main-color: #000000;
+	--font-weight: 400;
+	--font-weight-:700;
+	--width-clamp:clamp(1rem, 0.384rem + 2.629vw, 2.75rem);
+	--header-cell: #d3d3d3;
+	--header-background: #e7e7e7;
+	--header-background-dark: #1a1a1a;
+}

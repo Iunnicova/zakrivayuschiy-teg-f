@@ -12,6 +12,14 @@ body {
   margin: 0;
 }
 
+header {
+	font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+}
+
+main {
+  font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -41,6 +49,8 @@ ul,
 ol {
   list-style: none;
 }
+
+
 
 .visually-hidden {
   position: absolute;
