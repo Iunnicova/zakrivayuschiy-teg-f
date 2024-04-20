@@ -132,7 +132,6 @@
   flex-direction: column;
   width: 100%;
   min-height: 760px;
-  padding-bottom: 25px;
 }
 
 .card__title {
@@ -194,7 +193,7 @@
   column-gap: 5px;
 }
 
-.card__heart-btn {
+.card__icon-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -203,7 +202,7 @@
   height: 38px;
 }
 
-.card__like-btn {
+.card__like-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,20 +210,24 @@
   border: 2px solid var(--themes-main-color);
   width: 130px;
   height: 38px;
+
+}
+
+.button__text {
   font-size: 14px;
   font-weight: var(--font-weight-);
 }
 
-.card__heart-btn:focus,
-.card__like-btn:focus {
+.card__icon-button:focus,
+.card__like-button:focus {
   outline: none;
 }
 
-.card__heart-btn:focus-visible {
+.card__icon-button:focus-visible {
   border: 2px solid var(--themes-main-color);
 }
 
-.card__like-btn:focus-visible {
+.card__like-button:focus-visible {
   box-shadow: 2px 2px 0px 0px #000000;
 }
 
