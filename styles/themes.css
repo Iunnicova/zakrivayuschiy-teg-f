@@ -16,9 +16,8 @@
   --header-cell: #d3d3d3;
   --header-background: #e7e7e7;
   --header-background-dark: #1a1a1a;
-  --font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
-  --variable-font: "Inter", "Franklin Gothic Medium", "Arial Narrow", Arial,
-    sans-serif;
+  --font-family: "Press Start 2P";
+  --variable-font: "Inter";
 }
 
 :root.theme-dark {
@@ -30,9 +29,8 @@
   --header-cell: #000;
   --header-background: #007f0c;
   --header-background-dark: #004306;
-  --text-family: "Press Start 2P", Arial, Helvetica, sans-serif;
-  --variable-text: "Inter", "Franklin Gothic Medium", "Arial Narrow", Arial,
-    sans-serif;
+  --text-family: "Press Start 2P";
+  --variable-text: "Inter";
 }
 
 @media (prefers-color-scheme: light) {
