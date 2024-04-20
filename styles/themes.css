@@ -6,29 +6,34 @@
 */
 
 :root.theme-light {
-  /* --themes-background: #ffffff; */
-  /* --themes-main-color: #000000; */
-  --themes-background: #646f99;
-  --themes-main-color: #0ee218;
+  --themes-background: #ffffff;
+  --themes-main-color: #000000;
   --font-weight-: 400;
-	--font--weight:700;
+  --font--weight: 700;
+  --variable-weight-: 400;
+  --variable--weight: 700;
   --width-clamp: clamp(1rem, 0.384rem + 2.629vw, 2.75rem);
   --header-cell: #d3d3d3;
   --header-background: #e7e7e7;
   --header-background-dark: #1a1a1a;
-
+  --font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+  --variable-font: "Inter", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
 }
 
- :root.theme-dark {
-    --themes-background: #000000;
-    --themes-main-color: #00cc14;
-    --font-weight-: 465;
-    --font--weight: 785;
-    --width-clamp: clamp(1rem, 0.384rem + 2.629vw, 2.75rem);
-    --header-cell: #000;
-    --header-background: #007f0c;
-    --header-background-dark: #004306;
-  }
+:root.theme-dark {
+  --themes-background: #000000;
+  --themes-main-color: #00cc14;
+  --variable-weight-: 465;
+  --variable--weight: 785;
+  --width-clamp: clamp(1rem, 0.384rem + 2.629vw, 2.75rem);
+  --header-cell: #000;
+  --header-background: #007f0c;
+  --header-background-dark: #004306;
+  --text-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+  --variable-text: "Inter", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+}
 
 @media (prefers-color-scheme: light) {
   :root.theme-dark {

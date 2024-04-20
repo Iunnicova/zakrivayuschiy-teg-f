@@ -12,3 +12,11 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+@keyframes arrow {
+  0% {
+    transform: rotate(0) translateX(0.5px);
+  }
+  100% {
+    transform: rotate(0.5px) translateX(4px);
+  }
+}

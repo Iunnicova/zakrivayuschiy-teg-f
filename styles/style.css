@@ -1,22 +1,20 @@
 .page {
-  min-inline-size: 375px;
-  min-block-size: 100dvb;
-  /* background: var(--themes-background, #ffffff); */
-  background: var(--themes-background, #7b8bce);
-  /* color: var(--themes-main-color, #000000); */
+  background: var(--themes-background, #ffffff);
+  color: var(--themes-main-color, #000000);
   color: var(--themes-main-color, #0c6903);
   box-sizing: border-box;
   appearance: none;
+  min-inline-size: 375px;
+  min-block-size: 100dvb;
 }
 
 .header {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
   width: 100%;
-  /* min-height: 667px; */
-  padding: 102px 2px;
+  min-height: 667px;
+  padding-top: 100px;
   background: repeating-linear-gradient(
       transparent,
       transparent 2px,
@@ -40,25 +38,24 @@
 .header__area {
   display: flex;
   flex-direction: column;
-  max-width: 371px;
-  min-height: 323px;
+  min-height: 327px;
+  width: clamp(375px, 100%, 700px);
   background: var(--themes-background, #ffffff);
-  outline: 2px solid var(--themes-main-color, #000000);
+  border: 2px solid var(--themes-main-color, #000000);
   padding-top: 120px;
-  width: clamp(23.188rem, 16.035rem + 30.516vw, 43.5rem);
 }
 
 .header__logo {
   text-align: center;
-  font-size: 49px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   font-weight: var(--font-weight-);
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .header__title {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  font-weight: var(--font-weight-);
   text-align: center;
   padding-top: 20px;
   text-transform: uppercase;
@@ -69,7 +66,7 @@
   align-items: center;
   flex-direction: column;
   gap: 14px;
-  padding-top: 23px;
+  padding-top: 25px;
   font-size: 14px;
   font-weight: var(--font-weight-);
   line-height: 14px;
@@ -78,9 +75,9 @@
 
 .theme-menu__item {
   position: relative;
-  width: 82px;
+  width: 84px;
   max-height: 14px;
-  font-size: 15px;
+  font-size: 14px;
   text-align: justify;
 }
 
@@ -95,13 +92,13 @@
   content: "▶";
   display: block;
   position: absolute;
-  opacity: 0.9;
+  opacity: 0.6;
   inline-size: 5px;
-  right: 90px;
+  right: 92px;
   animation-name: arrow;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes arrow {
@@ -109,19 +106,91 @@
     transform: rotate(0) translateX(0.5px);
   }
   100% {
-    transform: rotate(0) translateX(4px);
+    transform: rotate(0.5px) translateX(4px);
   }
 }
 
-.article__text {
-  width: 351px;
-  height: 42px;
+  /* main */
+
+.content {
+  /* display: none; */
+}
+
+.block {
+  width: 100%;
+  min-height: 760px;
+  margin: -140px;
+}
+
+.article__title-text {
   font-size: 18px;
-  font-weight: var(--font--weight);
-  line-height: 21.78px;
-  text-align: left;
-  color: var(--Themes-mainColor, #000000);
+  font-weight: var(--variable--weight);
+  line-height: 22.78px;
+  color: var(--font--weight);
+  padding: 4px 10px 6px;
+}
+
+.article__card {
+  position: relative;
+}
+
+.article__image {
+  width: clamp(371px, 100%, px);
+  min-height: 371px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--themes-background);
+  border: 2px solid var(--themes-main-color);
+}
+
+.article__label {
+  position: absolute;
+  width: 98px;
+  height: 14px;
+  top: 23px;
+  left: 264px;
+  font-family: var(--text-family);
+  font-size: 14px;
+  font-weight: var(--variable-weight-);
+  line-height: 14px;
+  color: var(--themes-main-color);
+  border: 1px solid var(--themes-background);
+}
+
+.article__text {
+  width: clamp(19.816rem, -0.21rem + 85.442vw, 40.375rem);
+  font-family: var(--variable-font);
+  font-size: 18px;
+  font-weight: var(--variable-weight-);
+  line-height: 21px;
+  color: var(--themes-main-color);
+  padding: 25px 29px 27px 25px;
+}
+
+.info__recomendation {
+  width: clamp(20.063rem, -3.667rem + 101.246vw, 40.375rem);
+  height: clamp(2.625rem, 7.638rem + -10.553vw, 1.313rem);
+  /* width: 321px;
+  height: 42px; */
+  font-family: var(--variable-font);
+  font-size: 18px;
+  font-weight: var(--font-weight-);
+  line-height: 21px;
+  color: var(--themes-main-color);
+  padding: 0 25px;
 }
 
 #disk {
+}
+
+@media screen and (min-width: 700px) {
+  .header {
+    min-height: 960px;
+    padding-top: 102px;
+  }
+
+  .header__area {
+    min-height: 368px;
+    padding-top: 136px;
+  }
 }
