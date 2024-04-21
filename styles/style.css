@@ -1,4 +1,6 @@
 .page {
+  font-family: var(--font-family-main);
+  font-variation-settings: var(--font-weight-card-text);
   background: var(--themes-background, #ffffff);
   color: var(--themes-main-color, #000000);
   color: var(--themes-main-color, #0c6903);
@@ -8,38 +10,25 @@
   min-block-size: 100dvb;
 }
 
+.width-limiter {
+  width: var(--width-limiter);
+}
+
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: var(--font-family-accent);
   width: 100%;
   min-height: 667px;
+  background: var(--background-with-gradient);
   padding-top: 100px;
-  background: repeating-linear-gradient(
-      transparent,
-      transparent 2px,
-      var(--header-cell) 2px,
-      var(--header-cell) 4px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 2px,
-      var(--header-cell) 2px,
-      var(--header-cell) 4px
-    ),
-    linear-gradient(
-      180deg,
-      var(--header-background) 0.01%,
-      var(--header-background-dark) 100%
-    );
 }
 
 .header__area {
   display: flex;
   flex-direction: column;
   min-height: 327px;
-  width: clamp(375px, 100%, 700px);
   background: var(--themes-background, #ffffff);
   border: 2px solid var(--themes-main-color, #000000);
   padding-top: 120px;
@@ -48,14 +37,14 @@
 .header__logo {
   text-align: center;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  font-weight: var(--font-weight-);
+  font-weight: 400;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .header__title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  font-weight: var(--font-weight-);
+  font-weight: 400;
   text-align: center;
   padding-top: 20px;
   text-transform: uppercase;
@@ -67,18 +56,14 @@
   flex-direction: column;
   gap: 14px;
   padding-top: 25px;
-  font-size: 14px;
-  font-weight: var(--font-weight-);
-  line-height: 14px;
-  padding-left: 13px;
+  padding-left: 18px;
 }
 
 .theme-menu__item {
-  position: relative;
   width: 84px;
   max-height: 14px;
   font-size: 14px;
-  text-align: justify;
+  font-weight: 400;
 }
 
 .theme-menu__button {
@@ -86,27 +71,60 @@
   border: 1px solid transparent;
   cursor: pointer;
   text-transform: uppercase;
+  position: relative;
 }
+
+/***/
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+  pointer-events: none; /*дергает курсор*/
+  transition-timing-function: ease;
+  transition-duration: 0.3s;
+}
+
+.button::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  margin-top: -1px;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible::after {
+  width: 100%;
+  opacity: 0.6;
+  background-color: var(--themes-main-color);
+  transition: width 1s, background-color 0.3s;
+  transform: scaleX(1, 0.3);
+}
+
+/***/
 
 .theme-menu__button:disabled::before {
   content: "▶";
-  display: block;
+  display: inline-block;
   position: absolute;
+  left: -19px;
   opacity: 0.6;
   inline-size: 5px;
-  right: 92px;
   animation-name: arrow;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+  transform: translateX(-4px);
 }
 
 @keyframes arrow {
   0% {
-    transform: rotate(0) translateX(0.5px);
+    transform: translateX(-4px);
   }
   100% {
-    transform: rotate(0.5px) translateX(4px);
+    transform: translateX(0);
   }
 }
 
@@ -121,7 +139,6 @@
 .cards {
   display: flex;
   flex-direction: column;
-  width: clamp(375px, 100%, 700px);
   background-color: var(--themes-background);
   row-gap: 50px;
   margin-top: -140px;
@@ -135,8 +152,7 @@
 }
 
 .card__title {
-  font-weight: var(--variable--weight);
-  font-family: var(--variable-font);
+  font-variation-settings: var(--font-weight-card-title);
   font-size: 18px;
   line-height: 21.78px;
   color: var(--themes-main-color);
@@ -159,7 +175,8 @@
   top: 25px;
   right: 13px;
   font-size: 14px;
-  font-weight: var(--variable-weight-);
+  font-family: var(--font-family-accent);
+  font-weight: 400;
   line-height: 14px;
 }
 
@@ -179,9 +196,7 @@
 }
 
 .card__text {
-  font-family: var(--variable-font);
   font-size: 18px;
-  font-weight: var(--variable-weight-);
   line-height: 21px;
   color: var(--themes-main-color);
 }
@@ -200,6 +215,7 @@
   background: transparent;
   border: 2px solid transparent;
   height: 38px;
+  cursor: pointer;
 }
 
 .card__like-button {
@@ -210,12 +226,12 @@
   border: 2px solid var(--themes-main-color);
   width: 130px;
   height: 38px;
-
+  cursor: pointer;
 }
 
 .button__text {
+  font-family: var(--font-family-accent);
   font-size: 14px;
-  font-weight: var(--font-weight-);
 }
 
 .card__icon-button:focus,

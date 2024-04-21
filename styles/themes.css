@@ -6,42 +6,66 @@
 */
 
 :root.theme-light {
+  --font-weight-card-text: "wght" 400;
+  --font-weight-card-title: "wght" 700;
   --themes-background: #ffffff;
   --themes-main-color: #000000;
-  --font-weight-: 400;
-  --font--weight: 700;
-  --variable-weight-: 400;
-  --variable--weight: 700;
-  --width-clamp: clamp(1rem, 0.384rem + 2.629vw, 2.75rem);
-  --header-cell: #d3d3d3;
-  --header-background: #e7e7e7;
-  --header-background-dark: #1a1a1a;
-  --font-family: "Press Start 2P";
-  --variable-font: "Inter";
+  --background-with-gradient: repeating-linear-gradient(
+      transparent,
+      transparent 2px,
+      #d3d3d3 2px,
+      #d3d3d3 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      #d3d3d3 2px,
+      #d3d3d3 4px
+    ),
+    linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
 }
 
 :root.theme-dark {
+  --font-weight-card-text: "wght" 465;
+  --font-weight-card-title: "wght" 785;
   --themes-background: #000000;
   --themes-main-color: #00cc14;
-  --variable-weight-: 465;
-  --variable--weight: 785;
-  --width-clamp: clamp(1rem, 0.384rem + 2.629vw, 2.75rem);
-  --header-cell: #000;
-  --header-background: #007f0c;
-  --header-background-dark: #004306;
-  --text-family: "Press Start 2P";
-  --variable-text: "Inter";
+  --background-with-gradient: repeating-linear-gradient(
+      transparent,
+      transparent 2px,
+      #000 2px,
+      #000 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      #000 2px,
+      #000 4px
+    ),
+    linear-gradient(180deg, #007f0c 0.01%, #004306 100%);
 }
 
 @media (prefers-color-scheme: light) {
-  :root.theme-dark {
-    --themes-background: #000000;
-    --themes-main-color: #00cc14;
-    --font-weight-: 465;
-    --font--weight: 785;
-    --width-clamp: clamp(1rem, 0.384rem + 2.629vw, 2.75rem);
-    --header-cell: #000;
-    --header-background: #007f0c;
-    --header-background-dark: #004306;
+  :root {
+    --font-weight-card-text: "wght" 400;
+    --font-weight-card-title: "wght" 700;
+    --themes-background: #ffffff;
+    --themes-main-color: #000000;
+    --background-with-gradient: repeating-linear-gradient(
+        transparent,
+        transparent 2px,
+        #d3d3d3 2px,
+        #d3d3d3 4px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        #d3d3d3 2px,
+        #d3d3d3 4px
+      ),
+      linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
   }
 }

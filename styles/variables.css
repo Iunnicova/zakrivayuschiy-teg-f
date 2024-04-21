@@ -1,16 +1,9 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
-:root{
-  --themes-background: #ffffff;
-  --themes-main-color: #000000;
-  --font-weight-: 400;
-  --font--weight: 700;
-  --variable-weight-: 400;
-  --variable--weight: 700;
-  --width-clamp: clamp(1rem, 0.384rem + 2.629vw, 2.75rem);
-  --header-cell: #d3d3d3;
-  --header-background: #e7e7e7;
-  --header-background-dark: #1a1a1a;
-  --font-family: "Press Start 2P";
-  --variable-font: "Inter";
+:root {
+  --font-family-accent: "Press Start 2P", Arial, Helvetica, sans-serif;
+  --font-family-main: "Inter", Arial, Helvetica, sans-serif;
+  --font-weight-card-text: "wght" 400;
+  --font-weight-card-title: "wght" 700;
+  --width-limiter: clamp(375px, 100%, 700px);
 }
