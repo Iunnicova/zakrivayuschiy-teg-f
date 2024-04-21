@@ -9,7 +9,8 @@
   --font-weight-card-text: "wght" 400;
   --font-weight-card-title: "wght" 700;
   --themes-background: #ffffff;
-  --themes-main-color: #000000;
+  --themes-main-color: rgb(0, 0, 0);
+  --themes-main-color-opacity: rgb(0, 0, 0, 0.6);
   --background-with-gradient: repeating-linear-gradient(
       transparent,
       transparent 2px,
@@ -30,7 +31,8 @@
   --font-weight-card-text: "wght" 465;
   --font-weight-card-title: "wght" 785;
   --themes-background: #000000;
-  --themes-main-color: #00cc14;
+  --themes-main-color: rgb(0, 204, 20);
+  --themes-main-color-opacity: rgb(0, 204, 20, 0.6);
   --background-with-gradient: repeating-linear-gradient(
       transparent,
       transparent 2px,
@@ -52,7 +54,8 @@
     --font-weight-card-text: "wght" 400;
     --font-weight-card-title: "wght" 700;
     --themes-background: #ffffff;
-    --themes-main-color: #000000;
+    --themes-main-color: rgb(0, 0, 0);
+    --themes-main-color-opacity: rgb(0, 0, 0, 0.6);
     --background-with-gradient: repeating-linear-gradient(
         transparent,
         transparent 2px,
