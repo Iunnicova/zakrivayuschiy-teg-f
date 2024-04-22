@@ -242,7 +242,13 @@
   cursor: pointer;
 }
 
-.card__like-button {
+.card__icon-button:focus-visible {
+  border: 2px solid var(--themes-main-color);
+}
+
+/***/
+
+/* .card__like-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -258,13 +264,66 @@
   font-size: 14px;
 }
 
-.card__icon-button:focus-visible {
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 0px 0px #000000;
+} */
+
+.card__like {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__like-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
   border: 2px solid var(--themes-main-color);
+  cursor: pointer;
+  width: 130px;
+  height: 38px;
+}
+
+.card__like-button:hover {
+  color: #be5555;
+  position: relative;
+}
+
+.card__like-button::after {
+  content: "";
+  position: absolute;
+  background-color: var(--themes-main-color);
+  transform: translateX(-100%);
+  transition: 0.5s;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card__like-button:hover::after {
+  transform: translateX(0);
+}
+
+.card__button-text {
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: difference;
+}
+
+.button__text {
+  font-family: var(--font-family-accent);
+  font-size: 14px;
+  color: var(--themes-background);
 }
 
 .card__like-button:focus-visible {
   box-shadow: 2px 2px 0px 0px #000000;
 }
+
+/***/
+
+/*footer*/
 
 @media screen and (min-width: 700px) {
   .header {
