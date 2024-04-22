@@ -73,14 +73,12 @@
 .theme-menu__button {
   background: transparent;
   border: 1px solid transparent;
-  cursor: pointer;
   text-transform: uppercase;
+  cursor: pointer;
   position: relative;
   transition-timing-function: ease;
   transition-duration: 0.3s;
 }
-
-/***/
 
 .button:focus {
   outline: none;
@@ -107,7 +105,6 @@
 
 .theme-menu__button:focus-visible::after {
   width: 100%;
-  transform: scaleX(1);
 }
 
 .theme-menu__button:focus-visible {
@@ -246,31 +243,8 @@
   border: 2px solid var(--themes-main-color);
 }
 
-/***/
-
-/* .card__like-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  border: 2px solid var(--themes-main-color);
-  width: 130px;
-  height: 38px;
-  cursor: pointer;
-}
-
-.button__text {
-  font-family: var(--font-family-accent);
-  font-size: 14px;
-}
-
 .card__like-button:focus-visible {
   box-shadow: 2px 2px 0px 0px #000000;
-} */
-
-.card__like {
-  position: relative;
-  overflow: hidden;
 }
 
 .card__like-button {
@@ -282,10 +256,11 @@
   cursor: pointer;
   width: 130px;
   height: 38px;
+  position: relative;
+  overflow: hidden;
 }
 
 .card__like-button:hover {
-  color: #be5555;
   position: relative;
 }
 
@@ -314,16 +289,74 @@
 .button__text {
   font-family: var(--font-family-accent);
   font-size: 14px;
-  color: var(--themes-background);
+  color: var(--color-like);
 }
 
-.card__like-button:focus-visible {
+/*footer*/
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 52px;
+  margin-bottom: 100px;
+}
+
+.footer__container {
+  width: clamp(306px, 100%, 335px);
+  background-color: var(--themes-background);
+}
+
+.footer__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid var(--themes-main-color);
+  background-color: var(--themes-background);
+  overflow: hidden;
+  padding: 15px 19px;
+}
+
+.footer__button:focus-visible {
   box-shadow: 2px 2px 0px 0px #000000;
 }
 
-/***/
+.footer__button:hover::after {
+  transform: translateX(0);
+}
 
-/*footer*/
+.footer__button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--themes-main-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+
+.footor__disk {
+  color: var(--color-like);
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: difference;
+}
+
+.footor__disk-icon {
+  min-width: 28px;
+  min-height: 28px;
+}
+
+.footer__text {
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: difference;
+  white-space: nowrap;
+}
 
 @media screen and (min-width: 700px) {
   .header {
@@ -343,5 +376,13 @@
   .card__label {
     top: 27px;
     right: 25px;
+  }
+  .footer__button {
+    flex-direction: row;
+  }
+
+  .footor__disk-icon {
+    min-width: 21px;
+    min-height: 21px;
   }
 }

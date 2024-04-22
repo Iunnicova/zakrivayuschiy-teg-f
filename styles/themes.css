@@ -25,6 +25,10 @@
       #d3d3d3 4px
     ),
     linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
+
+--color-like: #ffffff;
+--color-disk: #000000;
+/* --color-e: #fff; */
 }
 
 :root.theme-dark {
@@ -47,6 +51,9 @@
       #000 4px
     ),
     linear-gradient(180deg, #007f0c 0.01%, #004306 100%);
+
+    --color-like: #00CC14;
+    --color-disk: #000000;
 }
 
 @media (prefers-color-scheme: light) {
@@ -70,5 +77,8 @@
         #d3d3d3 4px
       ),
       linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
+
+      --color-like: #ffffff;
+      --color-disk: #000000;
   }
 }
