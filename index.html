@@ -77,11 +77,8 @@
                     fill="#FF0000" />
                 </svg>
               </button>
-
-              <button class="card__like-button button" type="button">
-                <div class="card__button-text">
-                  <span class="button__text">Like</span>
-                </div>
+              <button class="card__like-button button main-button" type="button">
+                <span class="button__text">Like</span>
               </button>
 
             </div>
@@ -121,7 +118,7 @@
                     fill="#FF0000" />
                 </svg>
               </button>
-              <button class="card__like-button button" type="button">
+              <button class="card__like-button button main-button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -132,18 +129,27 @@
   </main>
   <footer class="footer">
     <div class="footer__container">
-      <button class="footer__button button" type="button">
-        <div class="footor__disk">
-          <svg class="footor__disk-icon" viewBox="0 0 39 39">
-            <use href="svg/floppy.svg#disk">
-          </svg>
-        </div>
-        <div class="footer__text">
-          <span class="button__text">Сохранить на память</span>
-        </div>
+      <button class="footer__button button main-button" type="button" onclick="window.disketteId.showModal()"
+        aria-controls="diskette-id">
+        <svg class="footor__disk-icon disk-icon" viewBox="0 0 39 39">
+          <use href="svg/floppy.svg#disk"></use>
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+
       </button>
     </div>
   </footer>
+  <dialog aria-label="Insert the floppy disk" id="disketteId" class="dialog">
+    <div class="dialog__wrapper">
+      <svg class="dialog__disk-icon disk-icon" viewBox="0 0 39 39">
+        <use href="svg/floppy.svg#disk"></use>
+      </svg>
+      <span class="dialog__text">Вставьте дискету, чтобы продолжить</span>
+    </div>
+    <button class="dialog__button button main-button" onclick="window.disketteId.close()" type="button">
+      <span class="button__text">OK</span>
+    </button>
+  </dialog>
   <script src="./scripts/like.js"></script>
 </body>
 
