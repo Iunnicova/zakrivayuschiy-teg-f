@@ -93,15 +93,13 @@
 }
 
 .theme-menu__button::after {
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 3px;
   margin-top: -1px;
   background-color: var(--themes-main-color);
-  transition:
-    width 1s,
-    background-color 0.3s;
+  transition: width 1s, background-color 0.3s;
   opacity: 0.6;
 }
 
@@ -114,7 +112,7 @@
 }
 
 .theme-menu__button:disabled::before {
-  content: '▶';
+  content: "▶";
   display: inline-block;
   position: absolute;
   left: -19px;
@@ -188,10 +186,8 @@
   font-weight: 400;
   line-height: 14px;
   mix-blend-mode: hard-light;
-  text-shadow:
-    0 0 2px var(--themes-background),
-    0 0 2px var(--themes-background),
-    0 0 2px var(--themes-background),
+  text-shadow: 0 0 2px var(--themes-background),
+    0 0 2px var(--themes-background), 0 0 2px var(--themes-background),
     0 0 2px var(--themes-background);
   color: var(--themes-main-color);
   opacity: 0.5;
@@ -276,7 +272,7 @@
 }
 
 .main-button::after {
-  content: '';
+  content: "";
   position: absolute;
   background-color: var(--themes-main-color);
   transform: translateX(-100%);
@@ -342,14 +338,14 @@
   border: 2px solid var(--themes-main-color);
   padding: 30px;
   margin: auto;
-}
-
-.dialog::backdrop {
-  background-color: rgb(0, 0, 0, 0.75);
+  transition: all 0.7s ease;
+  scale: 1;
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.75);
 }
 
 .dialog:not([open]) {
-  display: none;
+  scale: 0;
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0);
 }
 
 .dialog__wrapper {
