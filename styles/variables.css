@@ -1,5 +1,3 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
-
 :root {
   --font-family-accent: "Press Start 2P", Arial, Helvetica, sans-serif;
   --font-family-main: "Inter", Arial, Helvetica, sans-serif;
