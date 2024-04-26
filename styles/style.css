@@ -160,7 +160,7 @@
 .card__title {
   font-variation-settings: var(--font-weight-card-title);
   font-size: 18px;
-  line-height: 22.78px;
+  line-height: 23.78px;
   color: var(--themes-main-color);
   border: 2px solid var(--themes-main-color);
   padding: 3px 9px 5px;
@@ -170,6 +170,7 @@
   position: relative;
   width: 100%;
   font-size: 0;
+  overflow: hidden;
 }
 
 .card__image {
@@ -199,7 +200,6 @@
 
 .card__image-concentration {
   filter: blur(0.5rem);
-  /* box-shadow: none; */
 }
 
 .card__image-beginning {
@@ -233,7 +233,7 @@
 .card__wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 25px;
+  row-gap: 24px;
   border: 2px solid var(--themes-main-color);
   width: 100%;
   padding: 22px 25px 25px;
@@ -272,44 +272,116 @@
   border: 2px solid var(--themes-main-color);
 }
 
-/***/
-.contour {
-  fill: #000;
-}
-.main-body {
-  fill: #000;
-  opacity: 0;
-}
-.core {
-  opacity: 0;
-}
-.sparks {
-  opacity: 0;
+.like-icon {
+  cursor: pointer;
 }
 
-.card__icon-button:hover .contour {
+.like-icon .contour {
+  fill: var(--heart-color);
+  transition-timing-function: linear;
+  transition-duration: 0.1s;
+}
+
+.like-icon .main-body {
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  fill: transparent;
+}
+
+.like-icon .core {
+  transition-duration: 0.3s;
+  transition-delay: 0.03s;
+  transition-timing-function: linear;
+  fill: transparent;
+}
+
+.like-icon .sparks {
+  opacity: 0;
 }
 
 .like-icon:hover .main-body {
-  fill: black;
-  opacity: 0.9;
-  transition: 0.03s 0.3s ease-in;
+  fill: var(--heart-color);
+  transition-duration: 0.3s;
+  transition-delay: 0.05s;
+  transition-timing-function: linear;
 }
 
 .like-icon:hover .core {
-  fill: black;
-  opacity: 0.9;
-  transition: 0.3s 0.05s ease-in;
+  fill: var(--heart-color);
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 
-.like-icon:hover .sparks {
-  /* fill: rgb(99, 211, 231); */
+.like-icon:active .main-body {
+  fill: var(--heard-fill);
+  transition-duration: 0.3s;
+  transition-delay: 0.05s;
+  transition-timing-function: linear;
 }
 
-.heart:hover {
+.like-icon:active .core {
+  fill: var(--heard-fill);
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 
-/***/
+.like-icon.is-liked .contour {
+  fill: var(--heard-fill);
+  transition-duration: 0.3s;
+  transition-delay: 0.06s;
+  transition-timing-function: linear;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heard-fill);
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heard-fill);
+  transition-duration: 0.3s;
+  transition-delay: 0.05s;
+  transition-timing-function: linear;
+}
+
+.like-icon.is-liked {
+  animation-name: changes;
+  animation-duration: 0.3s;
+  animation-delay: 0.1s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+.like-icon.is-liked .sparks {
+  fill: var(--heard-fill);
+  animation-name: visibility;
+  animation-duration: 0.3s;
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+@keyframes visibility {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes changes {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.15);
+  }
+}
+
 .main-button {
   display: flex;
   flex-direction: column;
@@ -376,6 +448,7 @@
 .footer__container {
   width: clamp(306px, 100%, 335px);
   background-color: var(--themes-background);
+  margin: 0 35px;
 }
 
 .footer__button {
