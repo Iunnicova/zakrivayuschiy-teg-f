@@ -3,7 +3,6 @@
   --font-weight-card-title: "wght" 700;
   --themes-background: #ffffff;
   --themes-main-color: rgb(0, 0, 0);
-  --themes-main-color-opacity: rgb(0, 0, 0, 0.6);
   --color-like: #ffffff;
   --heart-color: #000;
   --background-with-gradient: repeating-linear-gradient(
@@ -27,7 +26,6 @@
   --font-weight-card-title: "wght" 785;
   --themes-background: #000000;
   --themes-main-color: rgb(0, 204, 20);
-  --themes-main-color-opacity: rgb(0, 204, 20, 0.6);
   --color-like: #00cc14;
   --heart-color: #00cc14;
   --background-with-gradient: repeating-linear-gradient(
@@ -48,27 +46,26 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --font-weight-card-text: "wght" 465;
-    --font-weight-card-title: "wght" 785;
-    --themes-background: #000000;
-    --themes-main-color: rgb(0, 204, 20);
-    --themes-main-color-opacity: rgb(0, 204, 20, 0.6);
-    --color-like: #00cc14;
-    --heart-color: #00cc14;
-    --heard-fill: #ff0000;
-    --background-with-gradient: repeating-linear-gradient(
-        transparent,
-        transparent 2px,
-        #000 2px,
-        #000 4px
-      ),
-      repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 2px,
-        #000 2px,
-        #000 4px
-      ),
-      linear-gradient(180deg, #007f0c 0.01%, #004306 100%);
+  --font-weight-card-text: "wght" 465;
+  --font-weight-card-title: "wght" 785;
+  --themes-background: #000000;
+  --themes-main-color: rgb(0, 204, 20);
+  --color-like: #00cc14;
+  --heart-color: #00cc14;
+  --heard-fill: #ff0000;
+  --background-with-gradient: repeating-linear-gradient(
+      transparent,
+      transparent 2px,
+      #000 2px,
+      #000 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      #000 2px,
+      #000 4px
+    ),
+    linear-gradient(180deg, #007f0c 0.01%, #004306 100%);
   }
 }
