@@ -43,7 +43,7 @@
   text-transform: uppercase;
 }
 
-.header__logo {
+.header__logo:focus {
   outline: none;
 }
 
@@ -276,10 +276,6 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--themes-main-color);
-}
-
-.like-icon {
-  cursor: pointer;
 }
 
 .like-icon .contour {
@@ -539,10 +535,6 @@
 
   .cards {
     row-gap: 52px;
-  }
-
-  .card__title {
-    padding: 4px 10px;
   }
 
   .card__label {
